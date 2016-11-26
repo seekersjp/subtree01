@@ -11,3 +11,6 @@ git subtree push --prefix=module/subtree01 subtree01_origin combine/develop
 github側でpullrequestなりを投げてmasterにマージ
 
 git subtree pull --prefix=module/subtree01 subtree01_origin
+
+# 別でcloneしたところから投げて、拾ってみる
+git subtree pull --prefix=module/subtree01 subtree01_origin develop
