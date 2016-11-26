@@ -6,10 +6,8 @@ git subtree add --squash --prefix=module/subteee01 subtree01_origin master
 
 ## combineリポジトリで変更
 git commit -m "modify: module/subtree01"
-git subtree split --prefix=module/subtree01 -b combine/develop
-git checkout combine/develop
-git push subtree01_origin
-git checkout develop
+git subtree push --prefix=module/subtree01 subtree01_origin combine/develop
 
-## ひょっとしてこれでもOK?
-git subtree push --prefix=module/subtree01 subtree01 combine/develop
+github側でpullrequestなりを投げてmasterにマージ
+
+git subtree pull --prefix=module/subtree01 subtree01_origin
